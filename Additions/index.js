@@ -1,8 +1,16 @@
-const myArray = [1, 2, 3, 4, 5];
-let result = 0
+const myArray = [];
+let count = 1;
 
-for (let i = 0; i <= myArray.length; i++) {
-    result += myArray[i]
+function addNextNumber() {
+    myArray.push(count);
+    count++;
+    document.getElementById("result").innerHTML = `${myArray.join(" + ")} = ${addition()}`;
 }
 
-document.getElementById("result").innerHTML = result;
+function addition() {
+    let result = 0;
+    for (let i = 0; i <= myArray.length; i++) {
+        result += myArray[i];
+    }
+    return result;
+}
